@@ -1,0 +1,51 @@
+.text-slider-box {
+    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.text-slider {
+    position: relative;
+    width: 480px;
+    max-width: 100%;
+    height: 0px;
+    margin: auto;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: grab;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+/* Display & Position Active Slide */
+.slide.active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+/* Position Next Slide */
+.slide.next {
+    transform: translateX(100%);
+}
+/* Position Previous Slide */
+.slide.previous {
+    transform: translateX(-100%);
+}
+/* Position Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.controls button {
+    cursor: pointer;
+}
